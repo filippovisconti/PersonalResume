@@ -28,6 +28,7 @@ jobs:
 
     - name: Commit and push changes to repository B
       run: |
+        ls
         cd filippovisconti.github.io
         curl -o cv.pdf https://github.com/filippovisconti/PersonalResume/raw/main/cv.pdf
         git config --global user.email "github-actions@github.com"
