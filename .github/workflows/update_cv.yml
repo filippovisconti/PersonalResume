@@ -17,26 +17,19 @@ jobs:
 
     steps:
     - name: Checkout PersonalResume
-      uses: actions/checkout@v2
-
-    - name: Get cv.pdf
-      run: |
-        curl -o cv.pdf https://raw.githubusercontent.com/${{ GITHUB_REPOSITORY }}/${{ GITHUB_SHA }}/cv.pdf
+      uses: actions/checkout@v3
 
     - name: Checkout filippovisconti.github.io
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: filippovisconti.github.io
         ref: main
         token: ${{ env.GITHUB_TOKEN }}
 
-    - name: Copy cv.pdf to repository B
-      run: |
-        cp cv.pdf filippovisconti.github.io/files/cv.pdf
-
     - name: Commit and push changes to repository B
       run: |
         cd filippovisconti.github.io
+        curl -o cv.pdf https://github.com/filippovisconti/PersonalResume/raw/main/cv.pdf
         git config --global user.email "github-actions@github.com"
         git config --global user.name "GitHub Actions"
         git add cv.pdf
