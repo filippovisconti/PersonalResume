@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 # This script can be added to the GitHub Actions workflow of repository A
 
-name: Upload cv.pdf to repository B
+name: Upload cv.pdf to filippovisconti.github.io
 
 on:
   push:
