@@ -1,0 +1,245 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\setlength{\footskip}{4.08003pt}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{filippovisconti.github.io}{\Large Filippo Visconti}} & Email : \href{mailto:filippo@filippovisconti.com}{\underline{filippo@filippovisconti.com}}\\
+  \href{www.filippovisconti.com}{www.filippovisconti.com} & Mobile : +39 346 491 5591 \\
+\end{tabular*}
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Eidgenössische Technische Hochschule Zürich}{Zurich (Switzerland)}
+{Master of Science in Computer Science}{Sept. 2022 -- July 2024}
+\resumeItemListStart
+\resumeItem{Major in \textbf{Secure and Reliable Systems} - Minor in \textbf{Networking}}
+\resumeItem{Developed a tiny \textbf{ACME client} to easily manage TLS certificates, implementing JOSE cryptography from scratch -- educational purposes only, not production ready}
+\resumeItemListEnd
+
+\resumeSubheading
+{Università degli Studi Roma TRE}{Rome (Italy)}
+{Bachelor of Science in Computer Engineering}{Sept. 2019 -- July 2022}
+\resumeItemListStart
+\resumeItem{Graduated with \textbf{110/110 cum Laude}}
+\resumeItem{Final \emph{GPA}: 28.9/30.0.}
+\resumeItem{Final thesis: \textsl{"Realization of a cyber defense system: analysis of VPN solutions."} under the supervision of Prof. Maurizio Patrignani}
+
+\resumeItemListEnd
+
+\resumeSubheading
+{Pugwash District High School}{Pugwash (Canada) }
+{Canadian High School Diploma }{Sept. 2017 -- Jun. 2018}
+\resumeItemListStart
+\resumeItem{Graduated with Honors.}
+% \resumeItem{GPA: 98/100.}
+\resumeItemListEnd
+
+% \resumeSubheading
+% {Liceo Scientifico Statale Farnesina}{Rome (Italy)}
+% {Italian High-School Diploma in Scientific Studies}{Sept. 2014  -- July 2019}
+% \resumeItemListStart
+% \resumeItem{Final Mark: 92/100.}
+% \resumeItemListEnd
+\resumeSubheading
+{Programming Languages}{}
+{Details}{}
+\resumeItemListStart
+\resumeItem{C: POSIX syscalls, threads and processes management, affinity sets, concurrent and parallel programming}
+\resumeItem{Java, C$\sharp$, Python: polymorphism, inheritance, overloading}
+\resumeItem{Others: OCaml, Go, HTML, CSS, PostgreSQL}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Personal Projects}
+\resumeSubHeadingListStart
+\resumeSubheading
+{FillYourTeam!}{Rome (Italy)}
+{Public repository available \href{https://github.com/filippovisconti/mcproject}{\underline{here}} }{Oct. 2021 - June 2022}
+\resumeItemListStart
+\resumeItem{Developed a multi-platform app using Xamarin framework and MVVM architecture.}
+\resumeItem{Mentored and collaborated with 2 team members.}
+\resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+
+\resumeSubheading
+{Bytewise}{Rome (Italy)}
+{System Engineer Intern}{Mar 2022 -- June 2022}
+\resumeItemListStart
+\resumeItem{Designed a \textbf{cyber defense system} for a small business}
+\resumeItem{Installed and configured of \textbf{network services and servers}: firewall, proxy, reverse proxy, DNS, DHCP, VPN, IDS, IPS.}
+\resumeItem{Managed hypervisors like \textbf{Proxmox VE} and ESXi, with virtual machines and \textbf{LXC} and \textbf{Docker containers}}
+\resumeItem{Worked on RHEL and Debian-based ditributions.}
+\resumeItem{Performed \textbf{basic penetration testing} using nmap, Metasploit, OpenVAS, dirbuster, and others.}
+\resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Other Experiences}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{ConfNow!}{Rome (Italy)}
+{ICT Staff}{\textit{Sept. 2021 -- Present}}
+\resumeItemListStart
+\resumeItem
+{Created and edited Wordpress sites.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Università degli Studi Roma TRE}{Rome (Italy)}
+{ICT Support and Management}{Mar 2021 -- June 2022}
+\resumeItemListStart
+\resumeItem{Managed accounts and software licenses.}
+\resumeItem{Provided support through a techinical helpdesk.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Languages, Skills and Interests}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+                \textbf{Languages}{: Italian: mother tongue. English: excellent (C2). Spanish: fair.} \\
+                \textbf{Other IT Skills}{: Microsoft Office Package: advanced user. \LaTeX: advanced user. } \\
+                \textbf{Hobbies}{: music production, sailing.}
+          }}
+\end{itemize}
+
+%-----------PROJECTS-----------------
+%\section{Projects}
+% \resumeSubHeadingListStart
+%  \resumeSubItem{QuantSoftware Toolkit}
+%   {Open source python library for financial data analysis and machine learning for finance.}
+%\resumeSubItem{Github Visualization}
+% {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+%\resumeSubItem{Recommendation System}
+% {Music and Movie recommender systems using collaborative filtering on public datasets.}
+%\resumeSubItem{Mac Setup}
+% {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+%\resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
