@@ -13,14 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout filippovisconti.github.io
-      uses: actions/checkout@v3
-      with:
-        repository: filippovisconti/filippovisconti.github.io
-        ref: main
-
+    # - name: Checkout filippovisconti.github.io
+    #   uses: actions/checkout@v3
+    #   with:
+    #     repository: filippovisconti/filippovisconti.github.io
+    #     ref: main
+    - name:
+      run: |
+        git clone https://${{ secrets.PAC }}@github.com/filippovisconti/filippovisconti.github.io.git/
+        cd filippovisconti.github.io
+        pwd
     - name: Commit and push changes to repository B
       run: |
+        pwd
         curl -o cv.pdf https://github.com/filippovisconti/PersonalResume/raw/main/cv.pdf
         mv cv.pdf files/
     - name: Commit files
@@ -31,9 +36,10 @@ jobs:
         git commit -a -m "Update cv.pdf"
     - name: Print test
       run: echo -n ${{ secrets.PAC }} | tail -c 3
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.PAC }}
-        branch: main
         repository: filippovisconti/filippovisconti.github.io
+        branch: main
