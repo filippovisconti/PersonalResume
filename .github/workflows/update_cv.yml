@@ -27,6 +27,9 @@ jobs:
     - name: Pull file
       run: |
         pwd
+        cd ../..
+        cd filippovisconti.github.io
+        pwd
         curl -o cv.pdf https://github.com/filippovisconti/PersonalResume/raw/main/cv.pdf
         mv cv.pdf files/
     - name: Commit files
