@@ -8,31 +8,30 @@ on:
     branches:
       - main
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   upload_pdf:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout PersonalResume
-      uses: actions/checkout@v3
-
     - name: Checkout filippovisconti.github.io
       uses: actions/checkout@v3
       with:
         repository: filippovisconti/filippovisconti.github.io
         ref: main
-        token: ${{ env.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Commit and push changes to repository B
       run: |
-        ls
         curl -o cv.pdf https://github.com/filippovisconti/PersonalResume/raw/main/cv.pdf
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
+        mv cv.pdf files/
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add cv.pdf
-        git commit -m "Update cv.pdf"
-        git push origin main
-
+        git commit -a -m "Update cv.pdf"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
