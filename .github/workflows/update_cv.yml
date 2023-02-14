@@ -29,9 +29,11 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add files/cv.pdf
         git commit -a -m "Update cv.pdf"
+    - name: Print test
+      run: echo -n ${{ secrets.PAC }} | tail -c 3
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.API_KEY }}a
+        github_token: ${{ secrets.PAC }}
         branch: main
         repository: filippovisconti/filippovisconti.github.io
