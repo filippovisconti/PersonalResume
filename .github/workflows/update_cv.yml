@@ -18,12 +18,13 @@ jobs:
     #   with:
     #     repository: filippovisconti/filippovisconti.github.io
     #     ref: main
-    - name:
+    - name: Clone website
       run: |
+        cd ../..
         git clone https://${{ secrets.PAC }}@github.com/filippovisconti/filippovisconti.github.io.git/
         cd filippovisconti.github.io
         pwd
-    - name: Commit and push changes to repository B
+    - name: Pull file
       run: |
         pwd
         curl -o cv.pdf https://github.com/filippovisconti/PersonalResume/raw/main/cv.pdf
