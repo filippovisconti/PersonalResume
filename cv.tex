@@ -45,8 +45,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.2in}
+% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -70,11 +70,19 @@
   }
 }
 
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSlimSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -110,30 +118,10 @@
 %----------HEADING----------
 \setlength{\footskip}{4.08003pt}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{\href{www.filippovisconti.com}{\Large Filippo Visconti}}\\
-	\href{www.filippovisconti.com}{\underline{filippovisconti.com}}  & \href{mailto:filippo@filippovisconti.com}{\underline{filippo@filippovisconti.com}}\\
+	\textbf{\href{https://www.filippovisconti.com}{\Large Filippo Visconti}}\\
+	\href{https://www.filippovisconti.com}{\underline{filippovisconti.com}}  & \href{mailto:filippo@filippovisconti.com}{\underline{filippo@filippovisconti.com}}\\
 	\href{https://www.linkedin.com/in/filippo-visconti/}{\underline{linkedin.com/in/filippo-visconti}} &  +39 346 491 5591
 \end{tabular*}
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-\resumeSubHeadingListStart
-
-
-\resumeSubheading
-{Bytewise Ltd.}{Rome (Italy)}
-{System Engineering Intern}{Mar 2022 -- June 2022}
-\resumeItemListStart
-\resumeItem{Designed and installed a \textbf{cyber defense system} for a small business, including assembling the hardware.}
-\resumeItem{Installed and configured \textbf{servers}, for services like firewall, proxy, reverse proxy, DNS, DHCP, VPN, IDS, IPS.}
-\resumeItem{Managed hypervisors (\textbf{Proxmox VE} and ESXi), deployed virtual machines and \textbf{LXC} and \textbf{Docker containers}}
-\resumeItem{Installed and \textbf{managed} Mikrotik \textbf{routers and switches}, configured VLANS, site-to-site WireGuard VPNs.}
-\resumeItem{Worked on \textbf{RHEL} and Debian-based ditributions.}
-\resumeItem{Performed \textbf{basic penetration testing} using nmap, Metasploit, OpenVAS, dirbuster, and others.}
-\resumeItemListEnd
-
-
-\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -143,9 +131,9 @@
 {Master of Science in Computer Science}{Sept. 2022 -- exp. Aug. 2024}
 \resumeItemListStart
 \resumeItem{Major in \textbf{Secure and Reliable Systems} - Minor in \textbf{Networking}}
-\resumeItem{Developed a tiny \href{https://github.com/filippovisconti/mini-acme}{\underline{ACME client}} in Python, implementing JOSE cryptography from scratch.}
-\resumeItem{Implemented an optimized algorithm for worst-case joins in SQL databases in C, with a final speedup of 20\%.}
-\resumeItem{Designed and developed  \href{https://github.com/filippovisconti/fuzzible}{\underline{a fuzzing tool}} for Ansible modules using Python and Docker containers.}
+\resumeItem{Current GPA: $5.35$/$6.0$.}
+\resumeItem{Final thesis: \textsl{"Securing satellite receiver firmware upgrades"} in collaboration with \emph{armasuisse}}
+\resumeItem{Thesis supervisors: Prof. Shweta Shinde and Dr. Vincent Lenders}
 
 \resumeItemListEnd
 
@@ -153,9 +141,10 @@
 {Università degli Studi Roma TRE}{Rome (Italy)}
 {Bachelor of Science in Computer Engineering}{Sept. 2019 -- July 2022}
 \resumeItemListStart
-\resumeItem{Graduated with \textbf{110/110 cum Laude}}
-%\resumeItem{Final \emph{GPA}: 28.9/30.0.}
-\resumeItem{Final thesis: \textsl{"Realization of a cyber defense system: analysis of VPN solutions."} under the supervision of Prof. Maurizio Patrignani}
+\resumeItem{Graduated with 110/110 cum Laude}
+\resumeItem{Final GPA: $28.9$/$30.0$.}
+\resumeItem{Final thesis: \textsl{"Realization of a cyber defense system: analysis of VPN solutions."}}
+\resumeItem{Thesis supervisor: Prof.~Maurizio Patrignani}
 
 \resumeItemListEnd
 
@@ -164,38 +153,102 @@
 {Canadian High School Diploma }{Sept. 2017 -- Jun. 2018}
 \resumeItemListStart
 \resumeItem{Graduated with Honors.}
-% \resumeItem{GPA: 98/100.}
+\resumeItem{Final GPA: $98$/$100$.}
 \resumeItemListEnd
 
-% \resumeSubheading
-% {Liceo Scientifico Statale Farnesina}{Rome (Italy)}
-% {Italian High-School Diploma in Scientific Studies}{Sept. 2014  -- July 2019}
-% \resumeItemListStart
-% \resumeItem{Final Mark: 92/100.}
-% \resumeItemListEnd
+\resumeSubheading
+{Liceo Scientifico Statale Farnesina}{Rome (Italy)}
+{Italian High-School Diploma in Scientific Studies}{Sept. 2014  -- July 2019}
+\resumeItemListStart
+\resumeItem{Final Mark: $92$/$100$.}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Personal Projects}
+\section{Technical Skills}
 \resumeSubHeadingListStart
-\resumeSubheading
-{FillYourTeam!}{Rome (Italy)}
-{Public repository available \href{https://github.com/filippovisconti/mcproject}{\underline{here}} }{Oct. 2021 - June 2022}
+\resumeSlimSubheading
+{Tools and Libraries}{}
 \resumeItemListStart
-\resumeItem{Developed a multi-platform app using Xamarin framework and MVVM architecture.}
-\resumeItem{Mentored and collaborated with 2 team members.}
+\resumeItem{Virtualization: Docker, LXC, VMware, VirtualBox, Proxmox VE, ESXi,  }
+\resumeItem{Network: WireGuard, OpenVPN, Wireshark, nmap, iptables, Squid, Snort}
+\resumeItem{Linux services: Ansible, PostgreSQL, MySQL, Apache, Nginx, Samba, Bind, Dnsmasq, DHCPd}
+\resumeItem{Databases: MySQL, PostgreSQL, SQLite}
+\resumeItem{Binary analysis: Ghidra, GDB, Valgrind, AFL}
+\resumeItem{Web: Flask, Springboot, React, Next.JS}
+\resumeItem{High Performance Computing: OpenMP, MPI, basics of CUDA, SIMD instructions, Intel Intrinsics}
+\resumeItem{Misc: Git, GitHub Actions, LaTeX, Vim, Makefile}
+
+\resumeItemListEnd
+
+\resumeSlimSubheading
+{Programming Languages}{}
+\resumeItemListStart
+\resumeItem{C: POSIX syscalls, threads and processes management, parallel programming, }
+\resumeItem{Java, C$\sharp$, Python}
+\resumeItem{Bash and basics of: OCaml, Go, TypeScript, PHP}
 \resumeItemListEnd
 
 \resumeSubheading
-{Programming Languages}{}
-{Details}{}
+{Projects}{}
+{Full portfolio on \href{https://github.com/filippovisconti}{\underline{GitHub}} }{}
 \resumeItemListStart
-\resumeItem{\textbf{C}: POSIX syscalls, threads and processes management, affinity sets, parallel programming, SIMD instructions}
-\resumeItem{Java, C$\sharp$, \textbf{Python} and \underline{basics} of: OCaml, Go, HTML, CSS, PostgreSQL}
+\resumeItem{2024 -- \href{https://github.com/filippovisconti/barber-shop}{\underline{Barber Shop}} -- Developed a web app for a fictitious barber shop using Next.JS with a booking system.}
+\resumeItem{2023 -- \href{https://github.com/filippovisconti/dphpc-project}{\underline{Blake}} -- Developed a multi-threaded, optimized version of the Blake algorithm in C.}
+\resumeItem{2023 -- Rowhammer -- Implemented a Rowhammer attack in C.}
+\resumeItem{2023 -- Worst Case Optimal Joins -- Implemented a worst-case optimal join algorithm in C.}
+\resumeItem{2023 -- \href{https://github.com/filippovisconti/mini-acme}{\underline{mini-acme}} -- Developed a minimal ACME client in Python.}
+\resumeItem{2022 -- \href{https://github.com/filippovisconti/Fuzzible}{\underline{Fuzzible}} -- Developed a fuzzing tool for Ansible modules using Python and Docker containers.}
+\resumeItem{2021 -- \href{https://github.com/filippovisconti/mcproject}{\underline{FillYourTeam!}}  -- Developed a multi-platform app using Xamarin framework and MVVM architecture.}
+% \resumeItem{Mentored and collaborated with 2 team members.}
 \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Ecotherm S.p.A.}{Rome (Italy)}
+{Freelance Software Developer}{Dec 2023}
+\resumeItemListStart
+\resumeItem{Migrated an internal web GIS application from a legacy LAMP stack to a modern one.}
+\resumeItem{Fixed bugs and added new features.}
+\resumeItem{Installed and setup a new dedicated server.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Bytewise S.r.l.}{Rome (Italy)}
+{System Engineering Intern}{Mar 2022 -- June 2022}
+\resumeItemListStart
+\resumeItem{Designed and installed a cyber defense system for a small business, including assembling the hardware.}
+\resumeItem{Installed and configured servers, for services like firewall, proxy, reverse proxy, DNS, DHCP, VPN, IDS, IPS.}
+\resumeItem{Installed and managed routers and switches, configured VLANS, site-to-site WireGuard VPNs.}
+\resumeItem{Worked on RHEL and Debian-based ditributions.}
+\resumeItem{Performed basic penetration testing using nmap, Metasploit, OpenVAS, dirbuster, and others.}
+\resumeItemListEnd
+
+\resumeSubheading
+{CyberChallenge.it}{Rome (Italy)}
+{Participant}{\textit{Feb 2023 -- June 2023}}
+\resumeItemListStart
+\resumeItem{Participated in the 2023 edition of the CyberChallenge.it, a national cybersecurity competition.}
+\resumeItem{Ranked 1st in the local competition.}
+\resumeItem{Ranked 26th over 41 in the national competition.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Talks}{}
+{Seminar speaker at Università degli Studi Roma TRE}{}
+\resumeItemListStart
+\resumeItem{Intro to Hardware Vulnerabilities (Rowhammer, Meltdown) - Rome, January 2024}
+\resumeItem{Intro to Stack Overflows and Buffer Overflows -  Rome, March 2023}
+\resumeItemListEnd
+
 
 \resumeSubHeadingListEnd
+
 
 
 
@@ -204,29 +257,37 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Talks}{Rome (Italy)}
-{Seminar speaker at Università degli Studi Roma TRE}{\textit{March. 2023, January 2024}}
-\resumeItemListStart
-\resumeItem{Intro to Stack Overflows and Buffer Overflows - March 2023}
-\resumeItem{Intro to Hardware Vulnerabilities (Rowhammer, Meltdown) - January 2024}
-\resumeItemListEnd
-
-\resumeSubheading
 {Università degli Studi Roma TRE}{Rome (Italy)}
 {ICT Support and Management}{Mar 2021 -- June 2022}
 \resumeItemListStart
 \resumeItem{Managed accounts and software licenses.}
 \resumeItem{Provided support through a technical helpdesk.}
 \resumeItemListEnd
-\resumeSubHeadingListEnd
 
+\resumeSubheading
+{Head of the Model International Court of Justice}{Rome (Italy)}
+{Liceo Scientifico Statale Farnesina}{Sept 2019 -- Feb 2020}
+\resumeItemListStart
+\resumeItem{Organized and managed the sessions for the Model International Court of Justice.}
+\resumeItemListEnd
+
+
+\resumeSubheading
+{Delegate at the Model United Nations}{San Jose (California, USA)}
+{Santa Teresa High School}{Jan 2019}
+\resumeItemListStart
+\resumeItem{Participated in the Model United Nations conference, as a country representative in the Legal Committee.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 %
-%-----------PROGRAMMING SKILLS-----------
+%----------- SKILLS-----------
 \section{Languages, Skills and Interests}
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
 	      \textbf{Languages}{: Italian: mother tongue. English: excellent (C2). Spanish: fair.} \\
-	      \textbf{Hobbies}{: music production, sailing.}
+          \textbf{Licences}{: A2 motorcycle, B car, Unrestricted Boating licence (both sailing and motor), Drone Open A1-A3 licence.}
+	      \textbf{Hobbies}{: music production, sailing, motorcycles, restoring classic cars.}
 	      }}
 \end{itemize}
 
